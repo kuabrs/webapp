@@ -36,5 +36,32 @@ namespace WebApp.Controllers
             return View();
         }
 
+        // GET: Fabricantes/Edit/5
+        public ActionResult Edit(long? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Fabricante fabricante = context.Fabricantes.Find(id);
+            if (fabricante == null)
+            {
+                return HttpNotFound();
+            }
+            return View(fabricante);
+        }
+        // POST: Fabricantes/Edit/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(Fabricante fabricante)
+        {
+            if (ModelState.IsValid)
+            {
+                context.Entry(fabricante).State = EntityState.Modified;
+                context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(fabricante);
+        }
     }
 }
