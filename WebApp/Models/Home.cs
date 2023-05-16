@@ -7,5 +7,7 @@ namespace WebApp.Models
 {
     public class Home
     {
+        public IEnumerable<Fabricante> Fabricantes { get; set; }
+        public IEnumerable<Categoria> Categorias { get; set; }
     }
 }

@@ -1,0 +1,45 @@
+﻿@model WebApp.Models.Home
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <link href="@Url.Content("~/content/bootstrap.css")" rel="stylesheet" />
+        <title>Home</title>
+    </head>
+    <body>
+        <div>
+            <table class="table">
+                <tr>
+                    <th class="bg-primary" style="padding: 0.7em; border-radius:5px; border-top:none;font-size:1.3em">Fabricantes</th>
+                </tr>
+                @foreach (var fabricante in Model.Fabricantes)
+                {
+                    <td class="list-group-item" style="margin-top:0.4em">
+                        @Html.ActionLink(fabricante.Nome, "Details", "Fabricantes", new { id = fabricante.FabricanteId }, null)
+                    </td>
+                }
+
+            </table>
+            <table class="table">
+                <tr>
+                    <th class="bg-primary" style="padding: 0.7em; border-radius:5px; border-top:none;font-size:1.3em">Categorias</th>
+                </tr>
+                @foreach (var categoria in Model.Categorias)
+                {
+                    <td class="list-group-item" style="margin-top:0.4em">
+                        @Html.ActionLink(categoria.Nome, "Details", "Categorias", new { id = categoria.CategoriaId }, null)
+                    </td>
+                }
+
+            </table>
+        </div>
+
+
+        <script src="@Url.Content("~/scripts/jquery-2.2.4.js")"></script>
+        <script src="@Url.Content("~/scripts/bootstrap.js")"></script>
+    </body>
+    </html>
