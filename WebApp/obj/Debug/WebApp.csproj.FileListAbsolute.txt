@@ -75,7 +75,7 @@ C:\Users\20211011110001\Source\Repos\kuabrs\webapp\WebApp\bin\pt-br\System.Web.W
 C:\Users\20211011110001\Source\Repos\kuabrs\webapp\WebApp\bin\pt-br\System.Web.Webpages.Razor.resources.dll
 C:\Users\20211011110001\Source\Repos\kuabrs\webapp\WebApp\bin\pt-br\System.Web.Helpers.resources.dll
 C:\Users\20211011110001\Source\Repos\kuabrs\webapp\WebApp\bin\pt-br\System.Web.Mvc.resources.dll
-C:\Users\20211011110001\Source\Repos\kuabrs\webapp\WebApp\obj\Debug\WebApp.csproj.CoreCompileInputs.cache
 C:\Users\20211011110001\Source\Repos\kuabrs\webapp\WebApp\obj\Debug\WebApp.csproj.CopyComplete
 C:\Users\20211011110001\Source\Repos\kuabrs\webapp\WebApp\obj\Debug\WebApp.dll
 C:\Users\20211011110001\Source\Repos\kuabrs\webapp\WebApp\obj\Debug\WebApp.pdb
+C:\Users\20211011110001\Source\Repos\kuabrs\webapp\WebApp\obj\Debug\WebApp.csprojAssemblyReference.cache
