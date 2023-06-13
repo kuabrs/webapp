@@ -9,5 +9,7 @@ namespace WebApp.Models
     {
         public IEnumerable<Fabricante> Fabricantes { get; set; }
         public IEnumerable<Categoria> Categorias { get; set; }
+        public IEnumerable<Produto> Produtos { get; set; }
+        public string filtro;
     }
 }

@@ -19,6 +19,7 @@ namespace WebApp.Controllers
             var fabricantes = context.Fabricantes;
             var home = new Home() { Fabricantes = fabricantes, Categorias = categorias };
             return View(home);
+
         }
     }
 }

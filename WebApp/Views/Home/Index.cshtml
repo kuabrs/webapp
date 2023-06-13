@@ -21,8 +21,10 @@
                     <td class="list-group-item" style="margin-top:0.4em">
                         @Html.ActionLink(fabricante.Nome, "Details", "Fabricantes", new { id = fabricante.FabricanteId }, null)
                     </td>
+                    <td>
+                        @Html.ActionLink("Criar", "Views/Fabricantes/Create", null, new { @class = "btn btn-success" })
+                    </td>
                 }
-
             </table>
             <table class="table">
                 <tr>
