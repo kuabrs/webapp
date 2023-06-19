@@ -1,48 +1,72 @@
 ﻿@model WebApp.Models.Home
 
 @{
-    ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Home";
 }
-    <html>
-    <head>
-        <meta name="viewport" content="width=device-width" />
-        <link href="@Url.Content("~/content/bootstrap.css")" rel="stylesheet" />
-        <title>Home</title>
-    </head>
-    <body>
-        <div>
-            <table class="table">
-                <tr>
-                    <th class="bg-primary" style="padding: 0.7em; border-radius:5px; border-top:none;font-size:1.3em">Fabricantes</th>
-                </tr>
-                @foreach (var fabricante in Model.Fabricantes)
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <table class="table">
+            <tr>
+                <th>Fabricantes</th>
+            </tr>
+            <tr>
+                @foreach (var item in Model.fabricantes)
                 {
-                    <td class="list-group-item" style="margin-top:0.4em">
-                        @Html.ActionLink(fabricante.Nome, "Details", "Fabricantes", new { id = fabricante.FabricanteId }, null)
-                    </td>
                     <td>
-                        @Html.ActionLink("Criar", "Views/Fabricantes/Create", null, new { @class = "btn btn-success" })
+                        @Html.ActionLink(item.Nome, "Index", "Home", new { FabId = item.FabricanteId }, null)
                     </td>
                 }
-            </table>
-            <table class="table">
-                <tr>
-                    <th class="bg-primary" style="padding: 0.7em; border-radius:5px; border-top:none;font-size:1.3em">Categorias</th>
-                </tr>
-                @foreach (var categoria in Model.Categorias)
+            </tr>
+        </table>
+    </div>
+
+    <div>
+        <table class="table">
+            <tr>
+                <th>Categorias</th>
+            </tr>
+            <tr>
+                @foreach (var item in Model.categorias)
                 {
-                    <td class="list-group-item" style="margin-top:0.4em">
-                        @Html.ActionLink(categoria.Nome, "Details", "Categorias", new { id = categoria.CategoriaId }, null)
+                    <td>
+                        @Html.ActionLink(item.Nome, "Index", "Home", new { CatId = item.CategoriaId }, null)
                     </td>
                 }
+            </tr>
+        </table>
+    </div>
 
-            </table>
+</body>
+@if ((Model.produtos != null) && (Model.filtro == "Fabricante"))
+{
+    @Html.Partial("~/Views/Produtos/_PorFabricante.cshtml", Model.produtos.ToList())
+}
+@if ((Model.produtos != null) && (Model.filtro == "Categoria"))
+{
+    @Html.Partial("~/Views/Produtos/_PorCategoria.cshtml", Model.produtos.ToList())
+}
 
-        </div>
 
-
-        <script src="@Url.Content("~/scripts/jquery-2.2.4.js")"></script>
-        <script src="@Url.Content("~/scripts/bootstrap.js")"></script>
-    </body>
-    </html>
+</html>
+@section styles{
+    <link href="@Url.Content("~/content/DataTables-1.10.2/css/dataTables.bootstrap.css")" rel="stylesheet" />
+}
+@section ScriptPage{
+    <script src="@Url.Content("~/scripts/DataTables-1.10.2/jquery.dataTables.js")"></script>
+    <script src="@Url.Content("~/scripts/DataTables-1.10.2/dataTables.bootstrap.js")"></script>
+}
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('li').removeClass("active");
+        $('#liHome').addClass("active");
+    });
+</script>

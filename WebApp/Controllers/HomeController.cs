@@ -10,16 +10,26 @@ namespace WebApp.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly EFContext context = new EFContext();
-
+        private EFContext context = new EFContext();
         // GET: Home
-        public ActionResult Index()
+        public ActionResult Index(long? FabId, long? CatId)
         {
-            var categorias = context.Categorias;
-            var fabricantes = context.Fabricantes;
-            var home = new Home() { Fabricantes = fabricantes, Categorias = categorias };
-            return View(home);
+            Home h = new Home();
+            h.fabricantes = context.Fabricantes.OrderBy(c => c.Nome);
+            h.categorias = context.Categorias.OrderBy(c => c.Nome);
+            if (FabId != null)
+            {
+                h.filtro = "Fabricante";
+                h.produtos = context.Produtos.Where(p => p.FabricanteId == FabId).OrderBy(c => c.Nome);
+            }
 
+            if (CatId != null)
+            {
+                h.filtro = "Categoria";
+                h.produtos = context.Produtos.Where(p => p.CategoriaId == CatId).OrderBy(c => c.Nome);
+            }
+
+            return View(h);
         }
     }
 }
