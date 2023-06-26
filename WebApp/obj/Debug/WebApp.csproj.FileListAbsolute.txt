@@ -78,4 +78,5 @@ C:\Users\20211011110001\Source\Repos\kuabrs\webapp\WebApp\bin\roslyn\vbc.exe.con
 C:\Users\20211011110001\Source\Repos\kuabrs\webapp\WebApp\bin\roslyn\vbc.rsp
 C:\Users\20211011110001\Source\Repos\kuabrs\webapp\WebApp\bin\roslyn\VBCSCompiler.exe
 C:\Users\20211011110001\Source\Repos\kuabrs\webapp\WebApp\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\20211011110001\Source\Repos\kuabrs\webapp\WebApp\obj\Debug\WebApp.csprojAssemblyReference.cache
+C:\Users\20211011110001\Source\Repos\kuabrs\webapp\WebApp\obj\Debug\WebApp.csproj.AssemblyReference.cache
+C:\Users\20211011110001\Source\Repos\kuabrs\webapp\WebApp\obj\Debug\WebApp.csproj.CoreCompileInputs.cache
