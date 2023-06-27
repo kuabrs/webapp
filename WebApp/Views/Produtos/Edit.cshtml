@@ -56,6 +56,8 @@ new { enctype = "multipart/form-data" }))
                 @Html.HiddenFor(model => model.ProdutoId)
                 @Html.HiddenFor(model => model.LogotipoMimeType)
                 @Html.HiddenFor(model => model.Logotipo)
+                @Html.HiddenFor(model => model.NomeArquivo)
+                @Html.HiddenFor(model => model.TamanhoArquivo)
                 <div class="col-md-offset-7 col-md-5">
                     <div class="form-group">
                         @Html.TextBox("logotipo", "", new { type = "file" }) <br />
@@ -83,9 +85,8 @@ new { enctype = "multipart/form-data" }))
                                     </label>
                                 </div>
                             </div>
-                            @Html.ActionLink("Baixar o arquivo : " + Model.NomeArquivo, "DownloadArquivo",
-                            "Produtos", new { area = "Cadastros", id = Model.ProdutoId }, null)
-                            @Html.ActionLink("Baixar o arquivo : " + Model.NomeArquivo, "DownloadArquivo2","Produtos", new { area = "Cadastros", id = Model.ProdutoId }, null)
+                            @Html.ActionLink("Baixar o arquivo : " + Model.NomeArquivo, "DownloadArquivo", "Produtos", new { area = "Cadastros", id = Model.ProdutoId }, null)
+                            
                         }
                     </div>
                 </div>

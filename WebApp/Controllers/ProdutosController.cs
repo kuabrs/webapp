@@ -85,9 +85,9 @@ namespace WebApp.Controllers
             return View(produto);
         }
         public Produto ObterProdutoPorId(long id)
-{
-return context.Produtos.Where(p => p.ProdutoId == id).Include(c => c.Categoria).Include(f => f.Fabricante).First();
-}
+        {
+        return context.Produtos.Where(p => p.ProdutoId == id).Include(c => c.Categoria).Include(f => f.Fabricante).First();
+        }
         public void GravarProduto(Produto produto)
         {
             if (produto.ProdutoId == null)
@@ -149,8 +149,7 @@ HttpPostedFileBase logotipo, string chkRemoverImagem)
 
         // POST: Produtos/Edit/5
         [HttpPost]
-        public ActionResult Edit(Produto produto,
-HttpPostedFileBase logotipo = null, string chkRemoverImagem = null)
+        public ActionResult Edit(Produto produto, HttpPostedFileBase logotipo = null, string chkRemoverImagem = null)
         {
             return GravarProduto(produto, logotipo, chkRemoverImagem);
             //try
@@ -212,9 +211,18 @@ HttpPostedFileBase logotipo = null, string chkRemoverImagem = null)
             fileStream.Close();
             return File(fileStream.Name, produto.LogotipoMimeType, produto.NomeArquivo);
         }
+        public FileContentResult GetLogotipo(long id)
+        {
+            Produto produto = ObterProdutoPorId(id);
+            if (produto != null)
+            {
+                return File(produto.Logotipo, produto.LogotipoMimeType);
+            }
+            return null;
+        }
         public FileContentResult GetLogotipo2(long id)
         {
-            Produto produto = .ObterProdutoPorId(id);
+            Produto produto = ObterProdutoPorId(id);
             if (produto != null)
             {
                 if (produto.NomeArquivo != null)
