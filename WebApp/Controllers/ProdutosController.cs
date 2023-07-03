@@ -7,6 +7,7 @@ using System.Data.Entity;
 using WebApp.Models;
 using System.Net;
 using System.IO;
+using Modelo.Cadastros;
 
 namespace WebApp.Controllers
 {

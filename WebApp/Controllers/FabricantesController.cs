@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Modelo.Cadastros;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -29,7 +30,7 @@ namespace WebApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                context.Fabricantes.Add(fabricante);
+                Fabricante fabricante1 = context.Fabricantes.Add(fabricante);
                 context.SaveChanges();
                 return RedirectToAction("Index");
             }
