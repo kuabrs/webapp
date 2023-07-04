@@ -1,5 +1,3 @@
-C:\Users\20211011110001\Source\Repos\kuabrs\webapp\WebApp\obj\Debug\WebApp.csproj.AssemblyReference.cache
-C:\Users\20211011110001\Source\Repos\kuabrs\webapp\WebApp\obj\Debug\WebApp.csproj.CoreCompileInputs.cache
 C:\Users\20211011110001\Source\Repos\kuabrs\webapp\WebApp\bin\WebApp.dll.config
 C:\Users\20211011110001\Source\Repos\kuabrs\webapp\WebApp\bin\WebApp.dll
 C:\Users\20211011110001\Source\Repos\kuabrs\webapp\WebApp\bin\WebApp.pdb
@@ -82,3 +80,7 @@ C:\Users\20211011110001\Source\Repos\kuabrs\webapp\WebApp\bin\pt-br\System.Web.M
 C:\Users\20211011110001\Source\Repos\kuabrs\webapp\WebApp\obj\Debug\WebApp.csproj.CopyComplete
 C:\Users\20211011110001\Source\Repos\kuabrs\webapp\WebApp\obj\Debug\WebApp.dll
 C:\Users\20211011110001\Source\Repos\kuabrs\webapp\WebApp\obj\Debug\WebApp.pdb
+C:\Users\20211011110001\Source\Repos\kuabrs\webapp\WebApp\obj\Debug\WebApp.csprojAssemblyReference.cache
+C:\Users\20211011110001\Source\Repos\kuabrs\webapp\WebApp\bin\Persistencia.dll
+C:\Users\20211011110001\Source\Repos\kuabrs\webapp\WebApp\bin\Persistencia.pdb
+C:\Users\20211011110001\Source\Repos\kuabrs\webapp\WebApp\bin\Persistencia.dll.config

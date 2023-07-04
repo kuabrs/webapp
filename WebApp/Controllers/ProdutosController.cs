@@ -8,6 +8,7 @@ using WebApp.Models;
 using System.Net;
 using System.IO;
 using Modelo.Cadastros;
+using Persistencia.Contexts;
 
 namespace WebApp.Controllers
 {
