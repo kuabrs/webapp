@@ -407,9 +407,9 @@
       <Project>{22bbe645-0adb-49ee-b110-baed40e3ab6a}</Project>
       <Name>Modelo</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Persistencia\Persistencia.csproj">
-      <Project>{0bc00b3b-c8b5-4453-a6f0-003161e820e6}</Project>
-      <Name>Persistencia</Name>
+    <ProjectReference Include="..\Servicos\Servicos.csproj">
+      <Project>{3b918b3b-e988-4ada-9456-45ba260cf99b}</Project>
+      <Name>Servicos</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

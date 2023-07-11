@@ -8,21 +8,27 @@ using WebApp.Models;
 using System.Net;
 using System.IO;
 using Modelo.Cadastros;
-using Persistencia.Contexts;
+//using Persistencia.Contexts;
+using Servico.Cadastros;
+using Servico.Tabelas;
 
 namespace WebApp.Controllers
 {
     public class ProdutosController : Controller
     {
 
-            private EFContext context = new EFContext();
-  // GET: Produtos
+        //private EFContext context = new EFContext();
+        private ProdutoServico produtoServico = new ProdutoServico();
+        private CategoriaServico categoriaServico = new CategoriaServico();
+        private FabricanteServico fabricanteServico = new FabricanteServico();
+        // GET: Produtos
         public ActionResult Index()
         {
-            var produtos =
-            context.Produtos.Include(c => c.Categoria).Include(f => f.Fabricante).
-            OrderBy(n => n.Nome);
-            return View(produtos);
+            //var produtos =
+            //context.Produtos.Include(c => c.Categoria).Include(f => f.Fabricante).
+            //OrderBy(n => n.Nome);
+            //return View(produtos);
+            return View(produtoServico.ObterProdutosClassificadosPorNome());
         }
 
         // GET: Produtos/Details/5
@@ -34,6 +40,19 @@ namespace WebApp.Controllers
             }
             Produto produto = context.Produtos.Where(p => p.ProdutoId == id).
             Include(c => c.Categoria).Include(f => f.Fabricante).First();
+            if (produto == null)
+            {
+                return HttpNotFound();
+            }
+            return View(produto);
+        }
+        private ActionResult ObterVisaoProdutoPorId(long? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Produto produto = produtoServico.ObterProdutoPorId((long)id);
             if (produto == null)
             {
                 return HttpNotFound();
