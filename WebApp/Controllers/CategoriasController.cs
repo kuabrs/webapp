@@ -1,13 +1,9 @@
 ﻿using Modelo.Tabelas;
 using Persistencia.Contexts;
-using System;
-using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
-using WebApp.Models;
 
 namespace WebApp.Controllers
 {

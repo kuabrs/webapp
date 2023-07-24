@@ -7,7 +7,8 @@ C:\Users\20211011110001\source\Repos\kuabrs\webapp\Persistencia\bin\Debug\Modelo
 C:\Users\20211011110001\source\Repos\kuabrs\webapp\Persistencia\bin\Debug\Modelo.pdb
 C:\Users\20211011110001\source\Repos\kuabrs\webapp\Persistencia\bin\Debug\EntityFramework.xml
 C:\Users\20211011110001\source\Repos\kuabrs\webapp\Persistencia\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\20211011110001\source\Repos\kuabrs\webapp\Persistencia\obj\Debug\Persistencia.csprojAssemblyReference.cache
 C:\Users\20211011110001\source\Repos\kuabrs\webapp\Persistencia\obj\Debug\Persistencia.csproj.CopyComplete
 C:\Users\20211011110001\source\Repos\kuabrs\webapp\Persistencia\obj\Debug\Persistencia.dll
 C:\Users\20211011110001\source\Repos\kuabrs\webapp\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\20211011110001\Source\Repos\kuabrs\webapp\Persistencia\obj\Debug\Persistencia.csproj.AssemblyReference.cache
+C:\Users\20211011110001\Source\Repos\kuabrs\webapp\Persistencia\obj\Debug\Persistencia.csproj.CoreCompileInputs.cache
