@@ -1,5 +1,6 @@
 ﻿using Modelo.Tabelas;
 using Persistencia.Contexts;
+using Servico.Tabelas;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
@@ -9,10 +10,11 @@ namespace WebApp.Controllers
 {
     public class CategoriasController : Controller
     {
+        private CategoriaServico categoriaServico = new CategoriaServico();
         private readonly EFContext context = new EFContext();
         public ActionResult Index()
         {
-            return View(context.Categorias.OrderBy(c => c.Nome));
+            return View(categoriaServico.ObterCategoriasClassificadasPorNome());
         }
 
         public ActionResult Create()
@@ -36,16 +38,8 @@ namespace WebApp.Controllers
         }
         public ActionResult Edit(long? id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Categoria categoria = context.Categorias.Find(id);
-            if (categoria == null)
-            {
-                return HttpNotFound();
-            }
-            return View(categoria);
+            PopularViewBag(categoriaServico.ObterCategoriaPorId((long)id));
+            return ObterVisaoCategoriaPorId(id);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -73,18 +67,32 @@ namespace WebApp.Controllers
             }
             return View(categoria);
         }
-        public ActionResult Delete(long? id)
+        //public ActionResult Delete(long? id)
+        //{
+        //    if (id == null)
+        //    {
+        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+        //    }
+        //    Categoria categoria = context.Categorias.Find(id);
+        //    if (categoria == null)
+        //    {
+        //        return HttpNotFound();
+        //    }
+        //    return View(categoria);
+        //}
+        [HttpPost]
+        public ActionResult Delete(int id, FormCollection collection)
         {
-            if (id == null)
+            try
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                Categoria categoria = categoriaServico.EliminarCategoriaPorId(id);
+                TempData["Message"] = "Categoria " + categoria.Nome.ToUpper() + " foi removido";
+                return RedirectToAction("Index");
             }
-            Categoria categoria = context.Categorias.Find(id);
-            if (categoria == null)
+            catch
             {
-                return HttpNotFound();
+                return View();
             }
-            return View(categoria);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
