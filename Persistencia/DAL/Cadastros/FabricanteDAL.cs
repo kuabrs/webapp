@@ -28,6 +28,10 @@ namespace Persistencia.DAL.Cadastros
             }
             context.SaveChanges();
         }
+        public IQueryable<Fabricante> ObterFabricantesComProdutos()
+        {
+            return context.Fabricantes.Include("Produtos.Fabricante");
+        }
         public Fabricante EliminarFabricantePorId(long id)
         {
             Fabricante fabricante = ObterFabricantePorId(id);

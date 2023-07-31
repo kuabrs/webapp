@@ -28,6 +28,10 @@ namespace Persistencia.DAL.Tabelas
             }
             context.SaveChanges();
         }
+        public IQueryable<Categoria> ObterCategoriaComProdutos()
+        {
+            return context.Categorias.Include("Produtos.Categoria");
+        }
         public Categoria EliminarCategoriaPorId(long id)
         {
             Categoria categoria = ObterCategoriaPorId(id);

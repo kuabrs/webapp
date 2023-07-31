@@ -19,6 +19,10 @@ namespace Servico.Cadastros
         {
             return fabricanteDAL.ObterFabricantePorId(id);
         }
+        public IQueryable<Fabricante> ObterFabricantesComProdutos()
+        {
+            return fabricanteDAL.ObterFabricantesComProdutos();
+        }
         public void GravarFabricante(Fabricante fabricante)
         {
             fabricanteDAL.GravarFabricante(fabricante);

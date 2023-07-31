@@ -23,6 +23,11 @@ namespace Servico.Tabelas
         {
             categoriaDAL.GravarCategoria(categoria);
         }
+        public IQueryable<Categoria> ObterCategoriasComProdutos()
+        {
+            return categoriaDAL.ObterCategoriaComProdutos();
+        }
+
         public Categoria EliminarCategoriaPorId(long id)
         {
             Categoria categoria = categoriaDAL.ObterCategoriaPorId(id);
