@@ -10,6 +10,7 @@ namespace WebApp.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
+            AutomaticMigrationDataLossAllowed = true;
         }
 
         protected override void Seed(Persistencia.Contexts.EFContext context)
