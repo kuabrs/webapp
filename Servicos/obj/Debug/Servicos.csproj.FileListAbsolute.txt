@@ -10,5 +10,4 @@ C:\Users\20211011110001\Source\Repos\kuabrs\webapp\Servicos\bin\Debug\EntityFram
 C:\Users\20211011110001\Source\Repos\kuabrs\webapp\Servicos\obj\Debug\Servicos.csproj.CopyComplete
 C:\Users\20211011110001\Source\Repos\kuabrs\webapp\Servicos\obj\Debug\Servicos.dll
 C:\Users\20211011110001\Source\Repos\kuabrs\webapp\Servicos\obj\Debug\Servicos.pdb
-C:\Users\20211011110001\Source\Repos\kuabrs\webapp\Servicos\obj\Debug\Servicos.csproj.AssemblyReference.cache
-C:\Users\20211011110001\Source\Repos\kuabrs\webapp\Servicos\obj\Debug\Servicos.csproj.CoreCompileInputs.cache
+C:\Users\20211011110001\Source\Repos\kuabrs\webapp\Servicos\obj\Debug\Servicos.csprojAssemblyReference.cache
