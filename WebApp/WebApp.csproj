@@ -268,6 +268,8 @@
     <Content Include="Content\DataTables\css\semanticui.scss" />
     <Content Include="Content\DataTables\css\mixins.scss" />
     <Content Include="Content\DataTables\css\common.scss" />
+    <Content Include="Areas\Cadastros\Views\web.config" />
+    <Content Include="Areas\Tabelas\Views\web.config" />
     <None Include="Scripts\jquery-2.2.4.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -359,6 +361,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Cadastros\CadastrosAreaRegistration.cs" />
+    <Compile Include="Areas\Tabelas\TabelasAreaRegistration.cs" />
     <Compile Include="Context\EFContext.cs" />
     <Compile Include="Controllers\CategoriasController.cs" />
     <Compile Include="Controllers\FabricantesController.cs" />
@@ -406,6 +410,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Cadastros\Controllers\" />
+    <Folder Include="Areas\Cadastros\Data\" />
+    <Folder Include="Areas\Cadastros\Views\Shared\" />
+    <Folder Include="Areas\Tabelas\Controllers\" />
+    <Folder Include="Areas\Tabelas\Data\" />
+    <Folder Include="Areas\Tabelas\Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Modelo\Modelo.csproj">
