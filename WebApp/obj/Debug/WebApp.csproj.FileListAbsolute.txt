@@ -85,4 +85,5 @@ C:\Users\20211011110001\Source\Repos\kuabrs\webapp\WebApp\bin\Persistencia.pdb
 C:\Users\20211011110001\Source\Repos\kuabrs\webapp\WebApp\bin\Persistencia.dll.config
 C:\Users\20211011110001\Source\Repos\kuabrs\webapp\WebApp\bin\Servicos.dll
 C:\Users\20211011110001\Source\Repos\kuabrs\webapp\WebApp\bin\Servicos.pdb
-C:\Users\20211011110001\Source\Repos\kuabrs\webapp\WebApp\obj\Debug\WebApp.csprojAssemblyReference.cache
+C:\Users\20211011110001\Source\Repos\kuabrs\webapp\WebApp\obj\Debug\WebApp.csproj.AssemblyReference.cache
+C:\Users\20211011110001\Source\Repos\kuabrs\webapp\WebApp\obj\Debug\WebApp.csproj.CoreCompileInputs.cache

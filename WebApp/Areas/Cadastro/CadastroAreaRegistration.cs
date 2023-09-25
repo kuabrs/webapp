@@ -1,22 +1,22 @@
 ﻿using System.Web.Mvc;
 
-namespace WebApp.Areas.Cadastros
+namespace WebApp.Areas.Cadastro
 {
-    public class CadastrosAreaRegistration : AreaRegistration 
+    public class CadastroAreaRegistration : AreaRegistration 
     {
         public override string AreaName 
         {
             get 
             {
-                return "Cadastros";
+                return "Cadastro";
             }
         }
 
         public override void RegisterArea(AreaRegistrationContext context) 
         {
             context.MapRoute(
-                "Cadastros_default",
-                "Cadastros/{controller}/{action}/{id}",
+                "Cadastro_default",
+                "Cadastro/{controller}/{action}/{id}",
                 new { action = "Index", id = UrlParameter.Optional }
             );
         }

@@ -1,54 +1,55 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Net;
-using System.Web.Mvc;
-using Modelo.Tabelas;
 using System.Data.Entity;
-using Servico.Tabelas;
+using System.Linq;
+using System.Net;
+using System.Web;
+using System.Web.Mvc;
+using Modelo.Cadastros;
+using Servico.Cadastros;
 
-namespace WebApp.Controllers
+namespace WebApp.Areas.Cadastro.Controllers
 {
-    public class CategoriasController : Controller
+    public class FabricantesController : Controller
     {
-        private readonly CategoriaServico categoriaServico = new CategoriaServico();
-        private ActionResult ObterVisaoCategoriaPorId(long? id)
+        private FabricanteServico fabricanteServico = new FabricanteServico();
+
+        private ActionResult ObterVisaoFabricantePorId(long? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(
                 HttpStatusCode.BadRequest);
             }
-            Categoria categoria = categoriaServico.ObterCategoriaPorId((long)id);
-            if (categoria == null)
+            Fabricante fabricante = fabricanteServico.ObterFabricantePorId((long)id);
+            if (fabricante == null)
             {
                 return HttpNotFound();
             }
-            return View(categoria);
+            return View(fabricante);
         }
 
-        private ActionResult GravarCategoria(Categoria categoria)
+        private ActionResult GravarFabricante(Fabricante fabricante)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    categoriaServico.GravarCategoria(categoria);
+                    fabricanteServico.GravarFabricante(fabricante);
                     return RedirectToAction("Index");
                 }
-                return View(categoria);
+                return View(fabricante);
             }
             catch
             {
-                return View(categoria);
+                return View(fabricante);
             }
         }
 
-        // GET: Categorias
+        // GET: Fabricantes
         public ActionResult Index()
         {
-            return View(categoriaServico.ObterCategoriasClassificadasPorNome());
+            return View(fabricanteServico.ObterFabricantesClassificadosPorNome());
         }
 
         public ActionResult Create()
@@ -58,31 +59,31 @@ namespace WebApp.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(Categoria categoria)
+        public ActionResult Create(Fabricante fabricante)
         {
-            return GravarCategoria(categoria);
+            return GravarFabricante(fabricante);
         }
 
         public ActionResult Edit(long? id)
         {
-            return ObterVisaoCategoriaPorId(id);
+            return ObterVisaoFabricantePorId(id);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(Categoria categoria)
+        public ActionResult Edit(Fabricante fabricante)
         {
-            return GravarCategoria(categoria);
+            return GravarFabricante(fabricante);
         }
 
         public ActionResult Details(long? id)
         {
-            return ObterVisaoCategoriaPorId(id);
+            return ObterVisaoFabricantePorId(id);
         }
 
         public ActionResult Delete(long? id)
         {
-            return ObterVisaoCategoriaPorId(id);
+            return ObterVisaoFabricantePorId(id);
         }
 
         [HttpPost]
@@ -91,8 +92,8 @@ namespace WebApp.Controllers
         {
             try
             {
-                Categoria categoria = categoriaServico.EliminarCategoriaPorId(id);
-                TempData["Message"] = "Categoria " + categoria.Nome.ToUpper() + " foi removida";
+                Fabricante fabricante = fabricanteServico.EliminarFabricantePorId(id);
+                TempData["Message"] = "Fabricante " + fabricante.Nome.ToUpper() + " foi removido";
                 return RedirectToAction("Index");
             }
             catch
