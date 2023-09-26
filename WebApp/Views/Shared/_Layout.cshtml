@@ -25,14 +25,9 @@
                     <li role="presentation" class="active">
                         @Html.ActionLink("Home", "Index", "Home")
                     </li>
-                    <li role="presentation">
-                        @Html.ActionLink("Categorias", "Index", "Categorias")
-                    </li>
-                    <li role="presentation">
-                        @Html.ActionLink("Fabricantes", "Index", "Fabricantes")
-                    </li>
-                    <li id="liProdutos" role="presentation">
-                        @Html.ActionLink("Produtos", "Index", "Produtos")
+                    <li id="liCategorias" role="presentation">@Html.ActionLink("Categorias", "Index", "Categorias", new { Area = "Tabelas" }, null)</li>
+                    <li id="liFabricantes" role="presentation">@Html.ActionLink("Fabricantes", "Index", "Fabricantes", new { Area = "Cadastros" }, null)</li>
+                    <li id="liProdutos" role="presentation">@Html.ActionLink("Produtos", "Index", "Produtos", new { Area = "Cadastros" }, null)</li>
                     </li>
                 </ul>
             </div>
