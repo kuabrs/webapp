@@ -1,6 +1,0 @@
-C:\Users\20211011110001\source\Repos\kuabrs\webapp\Modelo\bin\Debug\Modelo.dll
-C:\Users\20211011110001\source\Repos\kuabrs\webapp\Modelo\bin\Debug\Modelo.pdb
-C:\Users\20211011110001\source\Repos\kuabrs\webapp\Modelo\obj\Debug\Modelo.dll
-C:\Users\20211011110001\source\Repos\kuabrs\webapp\Modelo\obj\Debug\Modelo.pdb
-C:\Users\20211011110001\Source\Repos\kuabrs\webapp\Modelo\obj\Debug\Modelo.csproj.AssemblyReference.cache
-C:\Users\20211011110001\Source\Repos\kuabrs\webapp\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache

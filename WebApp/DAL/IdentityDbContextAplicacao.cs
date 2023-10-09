@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
+using WebApp.Areas.Seguranca.Data;
 
 namespace WebApp.DAL
 {
@@ -20,7 +21,7 @@ namespace WebApp.DAL
             return new IdentityDbContextAplicacao();
         }
 
-        public System.Data.Entity.DbSet<WebAppProjeto2023.Areas.Seguranca.Data.Usuario> Usuarios { get; set; }
+        public System.Data.Entity.DbSet<WebApp.Areas.Seguranca.Data.Usuario> Usuarios { get; set; }
     }
     public class IdentityDbInit : DropCreateDatabaseIfModelChanges<IdentityDbContextAplicacao> { }
 }

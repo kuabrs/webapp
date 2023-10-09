@@ -20,8 +20,13 @@ namespace WebApp.Infraestrutura
             IdentityDbContextAplicacao db =
             context.Get<IdentityDbContextAplicacao>();
             GerenciadorUsuario manager = new GerenciadorUsuario(
-            new UserStore<Usuario>(db));
+            store: new UserStore<Usuario>(db));
             return manager;
+        }
+
+        internal static Areas.Seguranca.Data.Usuario FindById(string id)
+        {
+            throw new NotImplementedException();
         }
     }
 }

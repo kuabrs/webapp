@@ -1,5 +1,7 @@
-﻿@model IEnumerable<WebApp.Areas.Seguranca.Data.Usuario>
-Layout = "~/Views/Shared/_Layout.cshtml";
+﻿﻿@model IEnumerable<WebApp.Areas.Seguranca.Data.Usuario>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
     ViewBag.Title = "Listagem de USUÁRIOS";
 }
 @if (@TempData["Message"] != null)
@@ -68,6 +70,7 @@ Layout = "~/Views/Shared/_Layout.cshtml";
 @section styles{
     <link href="@Url.Content("~/content/DataTables/css/dataTables.bootstrap.css")"
           rel="stylesheet">
+
 }
 @section ScriptPage {
     <script src=" @Url.Content("~/scripts/DataTables-1.10.2/jquery.dataTables.js")">
@@ -75,12 +78,12 @@ Layout = "~/Views/Shared/_Layout.cshtml";
     <script src="@Url.Content("~/scripts/DataTables-1.10.2/dataTables.bootstrap.js")">
     </script>
     <script type="text/javascript">
-        $(document).ready(function () {
-            $('li').removeClass("active");
-            $('#liUsuarios').addClass("active");
-            $('.table').dataTable({
-                "order": [[1, "asc"]]
-            });
-        });
+$(document).ready(function () {
+$('li').removeClass("active");
+$('#liUsuarios').addClass("active");
+$('.table').dataTable({
+"order": [[1, "asc"]]
+});
+});
     </script>
 }
