@@ -2,6 +2,7 @@
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
+using WebApp.Infraestrutura;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,13 +21,8 @@ namespace WebApp.Infraestrutura
             IdentityDbContextAplicacao db =
             context.Get<IdentityDbContextAplicacao>();
             GerenciadorUsuario manager = new GerenciadorUsuario(
-            store: new UserStore<Usuario>(db));
+            new UserStore<Usuario>(db));
             return manager;
-        }
-
-        internal static Areas.Seguranca.Data.Usuario FindById(string id)
-        {
-            throw new NotImplementedException();
         }
     }
 }

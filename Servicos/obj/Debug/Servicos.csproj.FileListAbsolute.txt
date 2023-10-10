@@ -1,0 +1,13 @@
+C:\Users\20211011110001\Source\Repos\kuabrs\webapp\Servicos\bin\Debug\Servicos.dll
+C:\Users\20211011110001\Source\Repos\kuabrs\webapp\Servicos\bin\Debug\Servicos.pdb
+C:\Users\20211011110001\Source\Repos\kuabrs\webapp\Servicos\bin\Debug\Modelo.dll
+C:\Users\20211011110001\Source\Repos\kuabrs\webapp\Servicos\bin\Debug\Persistencia.dll
+C:\Users\20211011110001\Source\Repos\kuabrs\webapp\Servicos\bin\Debug\EntityFramework.dll
+C:\Users\20211011110001\Source\Repos\kuabrs\webapp\Servicos\bin\Debug\Modelo.pdb
+C:\Users\20211011110001\Source\Repos\kuabrs\webapp\Servicos\bin\Debug\Persistencia.pdb
+C:\Users\20211011110001\Source\Repos\kuabrs\webapp\Servicos\bin\Debug\Persistencia.dll.config
+C:\Users\20211011110001\Source\Repos\kuabrs\webapp\Servicos\bin\Debug\EntityFramework.xml
+C:\Users\20211011110001\Source\Repos\kuabrs\webapp\Servicos\obj\Debug\Servicos.csprojAssemblyReference.cache
+C:\Users\20211011110001\Source\Repos\kuabrs\webapp\Servicos\obj\Debug\Servicos.csproj.CopyComplete
+C:\Users\20211011110001\Source\Repos\kuabrs\webapp\Servicos\obj\Debug\Servicos.dll
+C:\Users\20211011110001\Source\Repos\kuabrs\webapp\Servicos\obj\Debug\Servicos.pdb

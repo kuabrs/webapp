@@ -14,10 +14,22 @@ namespace WebApp.Areas.Seguranca.Controllers
     public class AdminController : Controller
     {
         // Definição da Propriedade GerenciadorUsuario
-        public ActionResult Create()
+        private GerenciadorUsuario GerenciadorUsuario
         {
-            return View();
+            get
+            {
+                return HttpContext.GetOwinContext().
+                GetUserManager<GerenciadorUsuario>();
+
+            }
         }
+        // GET: Seguranca/Admin
+        public ActionResult Index()
+        {
+            return View(GerenciadorUsuario.Users);
+        }
+        public ActionResult Create()
+        { return View(); }
         private void AddErrorsFromResult(IdentityResult result)
         {
             foreach (string error in result.Errors)
@@ -38,11 +50,12 @@ namespace WebApp.Areas.Seguranca.Controllers
                 IdentityResult result = GerenciadorUsuario.Create(user, model.Senha);
                 if (result.Succeeded)
                 { return RedirectToAction("Index"); }
-                else
-                {
-                    AddErrorsFromResult(result);
-                }
             }
+            else
+            {
+                AddErrorsFromResult(result);
+            }
+
             return View(model);
         }
         public ActionResult Edit(string id)
@@ -96,5 +109,4 @@ namespace WebApp.Areas.Seguranca.Controllers
             return View(usuario);
         }
     }
-
 }

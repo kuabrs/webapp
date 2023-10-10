@@ -10,18 +10,22 @@ namespace WebApp.DAL
 {
     public class IdentityDbContextAplicacao : IdentityDbContext<Usuario>
     {
-        public IdentityDbContextAplicacao() : base("IdentityDB")
+        public IdentityDbContextAplicacao() : base("IdentityDb")
         { }
         static IdentityDbContextAplicacao()
         {
-            Database.SetInitializer<IdentityDbContextAplicacao>(new IdentityDbInit());
+            Database.SetInitializer<IdentityDbContextAplicacao>(
+            new IdentityDbInit());
         }
         public static IdentityDbContextAplicacao Create()
         {
             return new IdentityDbContextAplicacao();
         }
-
-        public System.Data.Entity.DbSet<WebApp.Areas.Seguranca.Data.Usuario> Usuarios { get; set; }
     }
-    public class IdentityDbInit : DropCreateDatabaseIfModelChanges<IdentityDbContextAplicacao> { }
+    public class IdentityDbInit :
+DropCreateDatabaseIfModelChanges
+<IdentityDbContextAplicacao>
+
+    {
+    }
 }
